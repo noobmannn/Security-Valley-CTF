@@ -17,15 +17,25 @@ license.exe
 
 Đầu tiên mình sẽ chạy File license trên Terminal Linux. Mình nhận ra cần phải nhập một Key từ bàn phím.
 
+![App Screenshot](https://github.com/shiroyagi4777/Security-Valley-CTF/blob/d08499c6703bae34021fb95af3d18a82275a6069/Reverse/Forgotten%20license%20key/Image/001.png)
+
 Mình thử nhập bừa một giá trị nào đó:
+
+![App Screenshot](https://github.com/shiroyagi4777/Security-Valley-CTF/blob/d08499c6703bae34021fb95af3d18a82275a6069/Reverse/Forgotten%20license%20key/Image/002.png)
 
 Mở File license trên IDA, mở Subview String và tìm thử chuỗi 'wrong length'
 
+![App Screenshot](https://github.com/shiroyagi4777/Security-Valley-CTF/blob/d08499c6703bae34021fb95af3d18a82275a6069/Reverse/Forgotten%20license%20key/Image/003.png)
+
 Mình nhận ra chuỗi này được gọi tới tại hàm sub_57E5A0, đọc qua code Assembly, mình nhận ra Input đầu vào chỉ được phép nhập 9 kí tự, và sau khi nhập đúng, chương trình sẽ gọi đến hàm sub_57E700
+
+![App Screenshot](https://github.com/shiroyagi4777/Security-Valley-CTF/blob/d08499c6703bae34021fb95af3d18a82275a6069/Reverse/Forgotten%20license%20key/Image/004.png)
 
 Đọc và phân tích code Assembly tại hàm sub_57E700, mình nhận ra định dạng của Key cần đưa vào: kí tự đầu tiên, thứ năm và thứ bảy lần lượt luôn luôn là '7', '-' và 'D', tổng của ba kí tự thứ hai, thứ ba và thứ tư phải bằng 203 và tổng của ba kí tự thứ sáu, thứ baỷ và thứ chín phải là 214
 
 Sẽ có rất nhiều Key thoả mãn các yêu cầu trên nên mình thử tìm 2 Key như vậy và nhập, có thể thấy kết quả in ra của mỗi lần nhập là khác nhau.
+
+![App Screenshot](https://github.com/shiroyagi4777/Security-Valley-CTF/blob/d08499c6703bae34021fb95af3d18a82275a6069/Reverse/Forgotten%20license%20key/Image/005.png)
 
 Từ đây mình sẽ Brute Force để tìm Key đúng
 
@@ -63,6 +73,8 @@ def bruteforce_license():
 bruteforce_license()
 ```
 Và đây là kết quả :)))
+
+![App Screenshot](https://github.com/shiroyagi4777/Security-Valley-CTF/blob/d08499c6703bae34021fb95af3d18a82275a6069/Reverse/Forgotten%20license%20key/Image/006.png)
 
 # Flag
 SecVal{go_r0ckz_m8!}
