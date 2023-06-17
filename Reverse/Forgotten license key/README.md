@@ -33,7 +33,7 @@ Mình nhận ra chuỗi này được gọi tới tại hàm sub_57E5A0, đọc 
 
 ![App Screenshot](https://github.com/shiroyagi4777/Security-Valley-CTF/blob/d08499c6703bae34021fb95af3d18a82275a6069/Reverse/Forgotten%20license%20key/Image/004.png)
 
-Đọc và phân tích code Assembly tại hàm sub_57E700, mình nhận ra định dạng của Key cần đưa vào: kí tự đầu tiên, thứ năm và thứ bảy lần lượt luôn luôn là '7', '-' và 'D', tổng của ba kí tự thứ hai, thứ ba và thứ tư phải bằng 203 và tổng của ba kí tự thứ sáu, thứ baỷ và thứ chín phải là 214
+Đọc và phân tích code Assembly tại hàm sub_57E700, mình nhận ra định dạng của Key cần đưa vào: kí tự đầu tiên, thứ năm và thứ bảy lần lượt luôn luôn là '7', '-' và 'D', tổng của ba kí tự thứ hai, thứ ba và thứ tư phải bằng 203 và tổng của ba kí tự thứ sáu, thứ tám và thứ chín phải là 214
 
 Sẽ có rất nhiều Key thoả mãn các yêu cầu trên nên mình thử tìm 2 Key như vậy và nhập, có thể thấy kết quả in ra của mỗi lần nhập là khác nhau.
 
