@@ -1,5 +1,7 @@
 # Security Valley CTF - Forgotten license key
 
+![App Screenshot](https://github.com/shiroyagi4777/Security-Valley-CTF/blob/4a71c5825328966c77e6a913798ae630006f21b6/Reverse/Forgotten%20license%20key/Image/Screenshot%202023-06-16%20132123.png)
+
 # Description
 
 Unfortunately, I forgot my license key. Fortunately, the program is somewhat chatty. Maybe together we can manage to recover the license key. Can you help me?
